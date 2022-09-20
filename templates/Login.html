@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>AA-AA</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/mainPage.css') }}">
+    <script src="{{ url_for('static',filename='styles/Scripts.js') }}"></script>
+    <script src="{{ url_for('static',filename='styles/fade-in-out-on-scroll/assets/js/scrollfade-0.1.js') }}"></script>
+    
+</head>
+
+
+<body class="bodies">
+
+    <div class="banner">
+
+        <div style="display: inline-block;width:fit-content;margin-top: 0.5%;margin-bottom: 0.3%;margin-left: 2%;">
+            <h1 class="bannerTextHeader">Anuoluwa</h1>
+            <h1 class="bannerTextBody">Portfolio</h1>
+        </div>
+
+        <div style="width: fit-content; float:right; margin-top: 1.25%;margin-right: 4%;">
+            <a href="mainPage.html" class="bannerWidget">Home</a>
+        </div>
+
+    </div>
+
+    <section class=loginSection>
+
+        <h1 style="text-align: center; font-family:Open_Sans">
+            Login
+        </h1>
+
+        <form action="http://127.0.0.1:5000/login" method="POST">
+
+            <div>
+
+                <label style="margin:5px 5px 5px 50px;font-family:Open_Sans;color:black" for="User">Username:</label>
+                <input style="margin-left:20px" name="Username" id="User">
+
+            </div>
+
+            <div>
+
+                <label style="margin:5px 8px 5px 50px;font-family:Open_Sans;color: black;" for="Password">Password:</label>
+                <input style="margin-left:22px" name="Password" id="Pass">
+
+            </div>
+
+            <div>
+                <button style="position:relative; margin:40px 50px 2100px 220px;background-color:#474056">Submit</button>
+            </div>
+
+        </form>
+
+
+    </section>
+
+
+</body>
+
+
+
+</html>

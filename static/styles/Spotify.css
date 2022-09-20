@@ -1,0 +1,29 @@
+.header {
+    background:linear-gradient(120deg, #1db954, #191414);
+    
+
+}
+
+.otherbody {
+    background-color: #ffffff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:monospace;
+    text-align:center;
+}
+
+.spotifyImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 17.5%;
+    padding-bottom: 25%;
+
+    width: 20%;
+}
+
+
+.bodies{
+    margin: 0;
+}

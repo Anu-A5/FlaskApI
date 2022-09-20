@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>AA-AA</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/mainPage.css') }}">
+    <script src="{{ url_for('static',filename='styles/Scripts.js') }}"></script>
+    <script src="{{ url_for('static',filename='styles/fade-in-out-on-scroll/assets/js/scrollfade-0.1.js') }}"></script>
+
+    <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        button{
+            border: none;
+            cursor:grab;
+            padding: 0px 0px 0px 0px;
+
+            background-color: #474056;
+        }
+        
+
+    </style>
+
+</head>
+
+
+<body class='bodies'>
+
+
+    <div class="banner">
+
+        <div style="display: inline-block;width:fit-content;margin-top: 0.5%;margin-bottom: 0.3%;margin-left: 2%;">
+            <h1 class="bannerTextHeader">Anuoluwa</h1>
+            <h1 class="bannerTextBody">Portfolio</h1>
+        </div>
+
+        <div style="width: fit-content; float:right; margin-top: 1.25%;margin-right: 4%;">
+            <a href="Login.html" class="bannerWidget">Login</a>
+        </div>
+
+    </div>
+
+    <div style="margin:auto; background-color: #474056;width: 100%;height: 640px;">
+        <section class="Scrollsection">
+            <div class="scroller">
+                <button onclick="scrollTo1()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/1.png') }}"></button>
+                <button onclick="scrollTo1()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/2.png') }}"></button>
+                <button onclick="scrollTo2()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/3.jpg') }}"></button>
+                <button onclick="scrollTo2()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/4.jpg') }}"></button>
+                <button ><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/5.jpg') }}"></button>
+                <button ><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/6.jpg') }}"></button>
+                <button ><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/7.jpg') }}"></button>
+                <button onclick="scrollTo4()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/8.png') }}"></button>
+                <button onclick="scrollTo4()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/9.png') }}"></button>
+                <button onclick="scrollTo4()"><img class="ImageScroller" src="{{ url_for('static',filename='styles/Pics/ScrollerR/10.png') }}"></button>
+            </div>
+        </section>  
+    </div>
+
+    <div class="footer">
+        <div class="footerImg" >
+            <button onclick="scrollToProj()" style="background-color: #0B0500"><img src="{{ url_for('static',filename='styles/icons/uparrowpng.png') }}" width="80px" height="65px" style="display: block; margin-top: 10px; background-color: #0B0500;"></button>
+        </div>
+        <div>
+            <h1 class="footerTxt">Project Descriptions</h1>
+        </div>
+    </div>
+
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>Artificial Intelligence Research</h1>
+                <p>Researched Machine Learning concepts. Going through<br>
+                    Regression; Classification; Clustering; Reinforcement Learning<br> 
+                    and Natural Language Processing.<br>
+                    <br>
+                    Recently, I have used CNNs to classify the MNIST dataset.
+                </p>
+            </div>
+            <div class="columnImg">
+                <img src=https://machinelearningmastery.com/wp-content/uploads/2019/02/sample_image-300x298.png class="resize">
+            </div>
+        </div>
+    </section>
+
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>Spotify Media Player</h1>
+                <p>Designed an application in python that <br>
+                    utilises the Spotify API to control Spotify <br>
+                    playback from the application.<br>
+                    The app requires a flask server hosted on a Raspberry pi <br>
+                    and it is also used on the raspberry pi with a touch screen<br>
+                    for increased convenience.
+                </p>
+            </div>
+            <div class="columnImg">
+                <img src="{{ url_for('static',filename='styles/Pics/ScrollerH/1.png') }}" class="resize">
+            </div>
+        </div>
+    </section>
+
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>Raspberry Pi Drawing application</h1>
+                <p>Designed a raspberry pi application in c++.<br>
+                    Uses threads and networking protocols to create and<br>
+                    send data to another raspberry pi that copies the result<br>
+                    on another screen.
+                </p>
+            </div>
+            <div class="columnImg">
+                <img src="{{ url_for('static',filename='styles/Pics/ScrollerR/3.jpg') }}" class="resize">
+            </div>
+        </div>
+    </section>
+
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>Game Of Life</h1>
+                <p>Created a series of games and simulations in <br>
+                    Java, including,<br>
+                    <br>
+                    Game of Life<br>
+                    <br>
+                    Colliding Mass Physics simulation<br>
+                    <br>
+                    Snake.
+                </p>
+            </div>
+            <div class="columnImg">
+                <img src="{{ url_for('static',filename='styles/Pics/ScrollerR/8.png') }}" class="resize">
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #0B0500;width:100%">
+        <div class="rowfooter">
+            <div class="columnfooter">
+                <a style="text-decoration: none;color: inherit;" href="https://www.linkedin.com/in/anuoluwaadeleye/"><h1 href="https://www.linkedin.com/in/anuoluwaadeleye/">linkedIn</h1></a>
+                <h1>github</h1>
+            </div>
+            <div class="columnfooter">
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+
+</html>

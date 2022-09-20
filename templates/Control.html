@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>AA-AA</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/mainPage.css') }}">
+    <script src="{{ url_for('static',filename='styles/Scripts.js') }}"></script>
+    <script src="{{ url_for('static',filename='styles/fade-in-out-on-scroll/assets/js/scrollfade-0.1.js') }}"></script>
+
+    <style>
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        button{
+            border: none;
+            background-color: #757083;
+            padding: 0px 0px 0px 0px;
+        }
+
+        input{
+            border: none;
+        }
+    
+
+    </style>
+
+    
+
+
+
+</head>
+
+
+<body class='bodies'>
+
+
+    <div class="banner">
+
+        <div style="display: inline-block;width:fit-content;margin-top: 0.5%;margin-bottom: 0.3%;margin-left: 2%;">
+            <h1 class="bannerTextHeader">Anuoluwa</h1>
+            <h1 class="bannerTextBody">Portfolio</h1>
+        </div>
+
+        <div style="width: fit-content; float:right; margin-top: 1.25%;margin-right: 4%;">
+            <a href="mainPage.html" class="bannerWidget">Home</a>
+        </div>
+
+    </div>
+
+    
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>Controllers</h1>
+                <h1 id="LightsVal" style="display: none;">{{ LightsV }}</h1>
+                <h1 id="AlarmVal" style="display: none;">{{ AlarmV }}</h1>
+
+                
+                <div style="display: flex;justify-content:space-between;gap:10px;flex-direction: row;position: relative;top: 50px; width: fit-content;">
+
+                    <section style="flex:auto">
+                        <form action="http://127.0.0.1:5000/controllers" method="POST">
+                            <h1 style="text-align: center;">Lights</h1>
+                            
+                            <button class="formB" id="Lights" type="submit" name="Lights" value=1>Hello</button>    
+                            
+                        </form>
+                    </section>
+
+                    <section style="flex:auto">
+                        <form action="http://127.0.0.1:5000/controllers" method="POST">
+                            <h1 style="text-align: center;">Alarm</h1>
+
+                            <button class="formB" id="Alarm" type="submit" name="Alarm" value=1>Hello</button>
+
+                        </form>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>Camera</h1>
+  
+            </div>
+
+        </div>
+    </section>
+
+    <section class="proj item scrollFade">
+        <div class="row">
+            <div class="column">
+                <h1>TEST</h1>
+  
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    
+
+</body>
+
+<script>
+
+    function convertToBool(state) {
+        if(state == 1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    var LOF = convertToBool(document.getElementById("LightsVal").innerHTML);
+    var AOF = convertToBool(document.getElementById("AlarmVal").innerHTML);
+
+    if(!LOF){
+        document.getElementById("Lights").style.backgroundColor= '#F6621C';
+    }else{
+        document.getElementById("Lights").style.backgroundColor= '#1CF662'
+    }
+    if(!AOF){
+        document.getElementById("Alarm").style.backgroundColor= '#F6621C';
+    }else{
+        document.getElementById("Alarm").style.backgroundColor= '#1CF662'
+    }
+
+    document.getElementById("Lights").innerHTML = LOF;
+    document.getElementById("Alarm").innerHTML = AOF;
+
+
+
+</script>
+
+</html>

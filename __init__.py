@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-username = "adminADMINadmin"
-password = "AmongUsInRealLife52299"
+username = #user name
+password = #password
 passwordHash = hash(password)
 usernameHash = hash(username)
 
